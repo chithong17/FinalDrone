@@ -1,0 +1,17 @@
+{
+  "altitude_field": "alt_rel",
+  "floor_ranges_m": [
+    {"floor": 1, "min": null, "max": 7.0, "max_inclusive": false},
+    {"floor": 2, "min": 7.4, "max": 9.3, "max_inclusive": true},
+    {"floor": 3, "min": 10.0, "max": 12.5, "max_inclusive": true},
+    {"floor": 4, "min": 13.0, "max": 15.0, "max_inclusive": true},
+    {"floor": 5, "min": 15.5, "max": null, "max_inclusive": true}
+  ],
+  "direction_boundary_margin_deg": 10.0,
+  "direction_sectors": [
+    {"direction": "NORTH", "start_deg": -47.0, "end_deg": 7.1},
+    {"direction": "EAST", "start_deg": 7.1, "end_deg": 133.0},
+    {"direction": "SOUTH", "start_deg": 133.0, "end_deg": -173.0},
+    {"direction": "WEST", "start_deg": -173.0, "end_deg": -47.0}
+  ]
+}

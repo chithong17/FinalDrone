@@ -1,0 +1,35 @@
+# Local recordings, reference media and downloaded archives
+*.zip
+*.tar.gz
+*.mp4
+*.ts
+*.m4a
+/Drive/
+/video/
+/fpt_map/
+/261105*/
+/manifest.json
+/telemetry.jsonl
+/laser.jsonl
+
+# Generated artifacts, evidence and local model assets
+/output/
+**/sample_data/
+**/outbox/
+**/models/
+**/tools/tesseract/
+**/fixtures/
+**/venue.json
+
+# Python environments and caches
+__pycache__/
+*.py[cod]
+.venv*/
+venv/
+.pytest_cache/
+
+# Local secrets and editor settings
+.env
+.env.*
+!.env.example
+.vscode/
