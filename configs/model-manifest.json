@@ -1,0 +1,28 @@
+{
+  "weights": "models/best_detector.pt",
+  "bytes": 6488938,
+  "sha256": "d77fdf0a727d7895f355d185d2120426b0b6cc9a77f067763acc14a8acafdd94",
+  "imgsz": 640,
+  "classes": [
+    "chair_orange",
+    "chair_white",
+    "chair_gray",
+    "backpack",
+    "fire_extinguisher",
+    "number_label"
+  ],
+  "source_checkpoint": "experiments/detector-real-a4-v3/weights/best.pt",
+  "training_data": "artifacts/training-v3",
+  "training_counts": {
+    "train": 523,
+    "dev": 90,
+    "holdout": 20
+  },
+  "ready_for_competition": false,
+  "limitations": [
+    "Small local object-photo set; A4 training variants include synthetic data.",
+    "No independent field validation for all classes.",
+    "Backpack-only fine-tune holdout mAP50: 0.3155451129222352",
+    "Live BTC API and video/OSD alignment not verified."
+  ]
+}

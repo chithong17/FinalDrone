@@ -1,0 +1,279 @@
+{
+  "selection_metric": "macro mAP50-95 across five object classes on common dev; excludes number_label",
+  "eligibility_rule": "When real A4 fixture is in train: require gray-chair detection with IoU>=0.5/conf>=0.35 on that known training fixture. This is not holdout accuracy.",
+  "data": "D:\\FPTDocuments\\Semester_8\\AI-Drone\\FinalDrone\\artifacts\\training-v3\\dataset.yaml",
+  "dataset_counts": {
+    "train": 523,
+    "dev": 90,
+    "holdout": 20
+  },
+  "real_a4_used_for_training": true,
+  "candidates": [
+    {
+      "weights": "D:\\FPTDocuments\\Semester_8\\AI-Drone\\FinalDrone\\experiments\\detector-frozen-v1\\weights\\best.pt",
+      "split": "val",
+      "imgsz": 416,
+      "per_class_map50_95": {
+        "chair_orange": 0.33679292929292937,
+        "chair_white": 0.010980527066754765,
+        "chair_gray": 0.01590138592750533,
+        "backpack": 0.2120773608916678,
+        "fire_extinguisher": 0.597,
+        "number_label": 0.5383002078121564
+      },
+      "training_fixture_pass": false,
+      "target_macro_map50_95": 0.23455044063577146,
+      "metrics": {
+        "metrics/precision(B)": 0.5532488313376724,
+        "metrics/recall(B)": 0.4700304908987773,
+        "metrics/mAP50(B)": 0.5292318022126746,
+        "metrics/mAP50-95(B)": 0.2851754018318356,
+        "fitness": 0.2851754018318356
+      }
+    },
+    {
+      "weights": "D:\\FPTDocuments\\Semester_8\\AI-Drone\\FinalDrone\\experiments\\detector-frozen-v1\\weights\\best.pt",
+      "split": "val",
+      "imgsz": 640,
+      "per_class_map50_95": {
+        "chair_orange": 0.237675,
+        "chair_white": 0.12240305892937473,
+        "chair_gray": 0.11771552245698066,
+        "backpack": 0.18245268694431557,
+        "fire_extinguisher": 0.5801666666666667,
+        "number_label": 0.5796087375913567
+      },
+      "training_fixture_pass": false,
+      "target_macro_map50_95": 0.24808258699946753,
+      "metrics": {
+        "metrics/precision(B)": 0.5506311647190277,
+        "metrics/recall(B)": 0.567332695841721,
+        "metrics/mAP50(B)": 0.6167260073669331,
+        "metrics/mAP50-95(B)": 0.30333694543144907,
+        "fitness": 0.30333694543144907
+      }
+    },
+    {
+      "weights": "D:\\FPTDocuments\\Semester_8\\AI-Drone\\FinalDrone\\experiments\\detector-full-v2\\weights\\best.pt",
+      "split": "val",
+      "imgsz": 416,
+      "per_class_map50_95": {
+        "chair_orange": 0.6980625,
+        "chair_white": 0.3431986272650127,
+        "chair_gray": 0.36890872560275545,
+        "backpack": 0.19170284051153846,
+        "fire_extinguisher": 0.779,
+        "number_label": 0.69463467488237
+      },
+      "training_fixture_pass": false,
+      "target_macro_map50_95": 0.4761745386758613,
+      "metrics": {
+        "metrics/precision(B)": 0.7133419533241055,
+        "metrics/recall(B)": 0.7540597902673237,
+        "metrics/mAP50(B)": 0.8180181032526614,
+        "metrics/mAP50-95(B)": 0.5125845613769461,
+        "fitness": 0.5125845613769461
+      }
+    },
+    {
+      "weights": "D:\\FPTDocuments\\Semester_8\\AI-Drone\\FinalDrone\\experiments\\detector-full-v2\\weights\\best.pt",
+      "split": "val",
+      "imgsz": 640,
+      "per_class_map50_95": {
+        "chair_orange": 0.6573333333333333,
+        "chair_white": 0.34243177655677653,
+        "chair_gray": 0.27593750000000006,
+        "backpack": 0.1758773674826236,
+        "fire_extinguisher": 0.311602422003284,
+        "number_label": 0.6587355522508469
+      },
+      "training_fixture_pass": false,
+      "target_macro_map50_95": 0.35263647987520347,
+      "metrics": {
+        "metrics/precision(B)": 0.7538927409952757,
+        "metrics/recall(B)": 0.6676001428941335,
+        "metrics/mAP50(B)": 0.7758699468954537,
+        "metrics/mAP50-95(B)": 0.40365299193781073,
+        "fitness": 0.40365299193781073
+      }
+    },
+    {
+      "weights": "D:\\FPTDocuments\\Semester_8\\AI-Drone\\FinalDrone\\experiments\\yolo11n-gpu-v2\\weights\\best.pt",
+      "split": "val",
+      "imgsz": 416,
+      "per_class_map50_95": {
+        "chair_orange": 0.5122428571428571,
+        "chair_white": 0.018502976190476188,
+        "chair_gray": 0.0030295228280739065,
+        "backpack": 0.07942892262856231,
+        "fire_extinguisher": 0.5970615577889447,
+        "number_label": 0.45138374675239945
+      },
+      "training_fixture_pass": false,
+      "target_macro_map50_95": 0.2420531673157828,
+      "metrics": {
+        "metrics/precision(B)": 0.4031911641694436,
+        "metrics/recall(B)": 0.4914240091361899,
+        "metrics/mAP50(B)": 0.4828491397192789,
+        "metrics/mAP50-95(B)": 0.27694159722188555,
+        "fitness": 0.27694159722188555
+      }
+    },
+    {
+      "weights": "D:\\FPTDocuments\\Semester_8\\AI-Drone\\FinalDrone\\experiments\\yolo11n-gpu-v2\\weights\\best.pt",
+      "split": "val",
+      "imgsz": 640,
+      "per_class_map50_95": {
+        "chair_orange": 0.7223444444444442,
+        "chair_white": 0.1914738191632928,
+        "chair_gray": 0.04372989635280686,
+        "backpack": 0.08434100070963041,
+        "fire_extinguisher": 0.7293333333333333,
+        "number_label": 0.5630481173093216
+      },
+      "training_fixture_pass": false,
+      "target_macro_map50_95": 0.3542444988007015,
+      "metrics": {
+        "metrics/precision(B)": 0.5183770548958807,
+        "metrics/recall(B)": 0.621407289459611,
+        "metrics/mAP50(B)": 0.5946764251038504,
+        "metrics/mAP50-95(B)": 0.3890451018854716,
+        "fitness": 0.3890451018854716
+      }
+    },
+    {
+      "weights": "D:\\FPTDocuments\\Semester_8\\AI-Drone\\FinalDrone\\experiments\\detector-refine-gpu-v2\\weights\\best.pt",
+      "split": "val",
+      "imgsz": 416,
+      "per_class_map50_95": {
+        "chair_orange": 0.784,
+        "chair_white": 0.27103075585072733,
+        "chair_gray": 0.299282894736842,
+        "backpack": 0.18586236974942352,
+        "fire_extinguisher": 0.8205,
+        "number_label": 0.7197371434792061
+      },
+      "training_fixture_pass": false,
+      "target_macro_map50_95": 0.47213520406739856,
+      "metrics": {
+        "metrics/precision(B)": 0.8579965866254177,
+        "metrics/recall(B)": 0.6759317157413124,
+        "metrics/mAP50(B)": 0.7629375501755634,
+        "metrics/mAP50-95(B)": 0.5134021939693665,
+        "fitness": 0.5134021939693665
+      }
+    },
+    {
+      "weights": "D:\\FPTDocuments\\Semester_8\\AI-Drone\\FinalDrone\\experiments\\detector-refine-gpu-v2\\weights\\best.pt",
+      "split": "val",
+      "imgsz": 640,
+      "per_class_map50_95": {
+        "chair_orange": 0.7735000000000001,
+        "chair_white": 0.4677619047619047,
+        "chair_gray": 0.4197500000000002,
+        "backpack": 0.17954512064644682,
+        "fire_extinguisher": 0.634,
+        "number_label": 0.7352172567285474
+      },
+      "training_fixture_pass": false,
+      "target_macro_map50_95": 0.49491140508167036,
+      "metrics": {
+        "metrics/precision(B)": 0.7475055216085474,
+        "metrics/recall(B)": 0.7833320778812759,
+        "metrics/mAP50(B)": 0.8382299067829829,
+        "metrics/mAP50-95(B)": 0.53496238035615,
+        "fitness": 0.53496238035615
+      }
+    },
+    {
+      "weights": "D:\\FPTDocuments\\Semester_8\\AI-Drone\\FinalDrone\\experiments\\detector-real-a4-v3\\weights\\best.pt",
+      "split": "val",
+      "imgsz": 416,
+      "per_class_map50_95": {
+        "chair_orange": 0.8835000000000001,
+        "chair_white": 0.06046445023661638,
+        "chair_gray": 0.3068089430894309,
+        "backpack": 0.264111964639602,
+        "fire_extinguisher": 0.7125,
+        "number_label": 0.7774547787494492
+      },
+      "training_fixture_pass": true,
+      "target_macro_map50_95": 0.4454770715931299,
+      "metrics": {
+        "metrics/precision(B)": 0.6710399908732315,
+        "metrics/recall(B)": 0.6641634465143856,
+        "metrics/mAP50(B)": 0.6907204165522319,
+        "metrics/mAP50-95(B)": 0.5008066894525165,
+        "fitness": 0.5008066894525165
+      }
+    },
+    {
+      "weights": "D:\\FPTDocuments\\Semester_8\\AI-Drone\\FinalDrone\\experiments\\detector-real-a4-v3\\weights\\best.pt",
+      "split": "val",
+      "imgsz": 640,
+      "per_class_map50_95": {
+        "chair_orange": 0.746,
+        "chair_white": 0.41349489795918365,
+        "chair_gray": 0.3696055555555556,
+        "backpack": 0.26590117399948304,
+        "fire_extinguisher": 0.609,
+        "number_label": 0.7759500493191812
+      },
+      "training_fixture_pass": true,
+      "target_macro_map50_95": 0.48080032550284446,
+      "metrics": {
+        "metrics/precision(B)": 0.7800572215068547,
+        "metrics/recall(B)": 0.7498586573317464,
+        "metrics/mAP50(B)": 0.8300877705916193,
+        "metrics/mAP50-95(B)": 0.5299919461389005,
+        "fitness": 0.5299919461389005
+      }
+    }
+  ],
+  "selected": {
+    "weights": "D:\\FPTDocuments\\Semester_8\\AI-Drone\\FinalDrone\\experiments\\detector-real-a4-v3\\weights\\best.pt",
+    "split": "val",
+    "imgsz": 640,
+    "per_class_map50_95": {
+      "chair_orange": 0.746,
+      "chair_white": 0.41349489795918365,
+      "chair_gray": 0.3696055555555556,
+      "backpack": 0.26590117399948304,
+      "fire_extinguisher": 0.609,
+      "number_label": 0.7759500493191812
+    },
+    "training_fixture_pass": true,
+    "target_macro_map50_95": 0.48080032550284446,
+    "metrics": {
+      "metrics/precision(B)": 0.7800572215068547,
+      "metrics/recall(B)": 0.7498586573317464,
+      "metrics/mAP50(B)": 0.8300877705916193,
+      "metrics/mAP50-95(B)": 0.5299919461389005,
+      "fitness": 0.5299919461389005
+    }
+  },
+  "holdout": {
+    "weights": "D:\\FPTDocuments\\Semester_8\\AI-Drone\\FinalDrone\\models\\best_detector.pt",
+    "split": "test",
+    "imgsz": 640,
+    "per_class_map50_95": {
+      "chair_orange": null,
+      "chair_white": null,
+      "chair_gray": null,
+      "backpack": 0.11692956407176716,
+      "fire_extinguisher": null,
+      "number_label": null
+    },
+    "training_fixture_pass": null,
+    "target_macro_map50_95": 0.11692956407176716,
+    "metrics": {
+      "metrics/precision(B)": 0.39558524594668937,
+      "metrics/recall(B)": 0.42424242424242425,
+      "metrics/mAP50(B)": 0.3155451129222352,
+      "metrics/mAP50-95(B)": 0.11692956407176716,
+      "fitness": 0.11692956407176716
+    }
+  },
+  "sha256": "d77fdf0a727d7895f355d185d2120426b0b6cc9a77f067763acc14a8acafdd94",
+  "note": "Small source-separated dataset with synthetic A4. Detector holdout does not establish competition accuracy. Real number fixtures were used for OCR development."
+}

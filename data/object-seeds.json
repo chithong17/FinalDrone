@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "coordinate_system": "normalized xyxy after EXIF transpose",
+  "annotation_method": "assistant visual review; approximate boxes and polygons; inspect generated overlays before use",
+  "classes": ["chair_orange", "chair_white", "chair_gray", "backpack", "fire_extinguisher"],
+  "samples": [
+    {"file":"chair_gray_1.JPG","split":"train","group":"gray-top","objects":[{"class":"chair_gray","bbox":[0.329,0.197,0.865,0.766],"polygon":[[0.329,0.493],[0.448,0.205],[0.730,0.197],[0.865,0.497],[0.714,0.766],[0.457,0.753]]}]},
+    {"file":"chair_gray_2.JPG","split":"train","group":"gray-top","objects":[{"class":"chair_gray","bbox":[0.327,0.190,0.862,0.762],"polygon":[[0.327,0.484],[0.447,0.196],[0.728,0.190],[0.862,0.484],[0.713,0.762],[0.455,0.748]]}]},
+    {"file":"chair_gray_3.JPG","split":"dev","group":"gray-side","objects":[{"class":"chair_gray","bbox":[0.255,0.285,0.606,0.757]},{"class":"chair_white","bbox":[0.011,0.096,0.148,0.270]},{"class":"chair_white","bbox":[0.091,0.117,0.245,0.318]},{"class":"chair_white","bbox":[0.201,0.145,0.380,0.368]},{"class":"chair_orange","bbox":[0,0.076,0.108,0.239]}]},
+    {"file":"chair_orange_1.JPG","split":"train","group":"orange-top","objects":[{"class":"chair_orange","bbox":[0.135,0.240,0.724,0.677],"polygon":[[0.135,0.479],[0.278,0.255],[0.580,0.240],[0.724,0.425],[0.607,0.638],[0.315,0.677]]},{"class":"chair_orange","bbox":[0.839,0.677,1,1]}]},
+    {"file":"chair_orange_2.JPG","split":"dev","group":"orange-side","objects":[{"class":"chair_orange","bbox":[0.130,0.129,0.357,0.386]},{"class":"chair_orange","bbox":[0.291,0.285,0.590,0.712]}]},
+    {"file":"chair_white_1.JPG","split":"train","group":"white-top","objects":[{"class":"chair_white","bbox":[0.065,0.230,0.737,0.761],"polygon":[[0.065,0.585],[0.113,0.299],[0.459,0.230],[0.737,0.413],[0.703,0.677],[0.389,0.761]]},{"class":"chair_gray","bbox":[0.785,0.910,1,1]}]},
+    {"file":"chair_white_2.JPG","split":"dev","group":"white-side","objects":[{"class":"chair_white","bbox":[0.307,0.294,0.640,0.755]},{"class":"chair_white","bbox":[0.282,0.080,0.460,0.290]},{"class":"chair_white","bbox":[0.406,0.105,0.595,0.318]},{"class":"chair_gray","bbox":[0.793,0.175,1,0.502]},{"class":"chair_orange","bbox":[0,0.025,0.063,0.177]},{"class":"chair_orange","bbox":[0.022,0.028,0.123,0.211]},{"class":"chair_orange","bbox":[0.217,0.064,0.344,0.253]}]},
+    {"file":"fire_extinguisher_1.JPG","split":"train","group":"extinguisher-front","objects":[{"class":"fire_extinguisher","bbox":[0.285,0.274,0.657,0.920],"polygon":[[0.448,0.279],[0.571,0.279],[0.581,0.315],[0.624,0.355],[0.592,0.399],[0.657,0.548],[0.589,0.623],[0.586,0.855],[0.548,0.902],[0.402,0.920],[0.357,0.882],[0.350,0.835],[0.287,0.879],[0.300,0.731],[0.305,0.470],[0.331,0.371],[0.402,0.326]]}]},
+    {"file":"fire_extinguisher_2.JPG","split":"train","group":"extinguisher-side","objects":[{"class":"fire_extinguisher","bbox":[0.377,0.193,0.713,0.914],"polygon":[[0.392,0.199],[0.577,0.212],[0.607,0.253],[0.685,0.289],[0.710,0.415],[0.687,0.682],[0.665,0.879],[0.623,0.914],[0.427,0.909],[0.378,0.867],[0.382,0.426],[0.398,0.334],[0.467,0.292],[0.402,0.281]]}]},
+    {"file":"fire_extinguisher_3.JPG","split":"dev","group":"extinguisher-rear","objects":[{"class":"fire_extinguisher","bbox":[0.263,0.233,0.645,0.879]}]},
+    {"file":"chair_gray_number_21.jpg","split":"holdout","group":"gray-A4-real","objects":[{"class":"chair_gray","bbox":[0.210,0.201,0.844,0.675],"number":21,"paper_quad":[[0.298,0.326],[0.647,0.347],[0.621,0.514],[0.296,0.489]]}]}
+  ]
+}

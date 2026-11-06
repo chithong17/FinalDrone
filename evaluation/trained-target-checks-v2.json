@@ -1,0 +1,796 @@
+{
+  "note": "Development object fixtures plus one detector holdout. Single-frame recognition gate only; does not bypass location/consensus or submit API.",
+  "samples": [
+    {
+      "file": "chair_gray_1.JPG",
+      "passed": true,
+      "accepted": [],
+      "proposals": 1,
+      "observations": [
+        {
+          "detection": {
+            "bbox": [
+              1266,
+              517,
+              3636,
+              2384
+            ],
+            "raw_class": "chair_gray",
+            "object_type": "chair_gray",
+            "confidence": 0.8822254538536072,
+            "label_bbox": null
+          },
+          "ocr": {
+            "text": null,
+            "number": null,
+            "confidence": null,
+            "label_bbox": null,
+            "reject_reason": "a4_number_paper_not_found",
+            "paper_bbox": null,
+            "orientation_verified": false
+          },
+          "target_recognized": false
+        }
+      ]
+    },
+    {
+      "file": "chair_gray_2.JPG",
+      "passed": true,
+      "accepted": [],
+      "proposals": 1,
+      "observations": [
+        {
+          "detection": {
+            "bbox": [
+              1285,
+              522,
+              3614,
+              2355
+            ],
+            "raw_class": "chair_gray",
+            "object_type": "chair_gray",
+            "confidence": 0.879830539226532,
+            "label_bbox": null
+          },
+          "ocr": {
+            "text": null,
+            "number": null,
+            "confidence": null,
+            "label_bbox": null,
+            "reject_reason": "no_confident_two_digit_label",
+            "paper_bbox": null,
+            "orientation_verified": false
+          },
+          "target_recognized": false
+        }
+      ]
+    },
+    {
+      "file": "chair_gray_3.JPG",
+      "passed": true,
+      "accepted": [],
+      "proposals": 6,
+      "observations": [
+        {
+          "detection": {
+            "bbox": [
+              766,
+              406,
+              1557,
+              1167
+            ],
+            "raw_class": "chair_white",
+            "object_type": "chair_white",
+            "confidence": 0.9882408976554871,
+            "label_bbox": null
+          },
+          "ocr": {
+            "text": null,
+            "number": null,
+            "confidence": null,
+            "label_bbox": null,
+            "reject_reason": "a4_number_paper_not_found",
+            "paper_bbox": null,
+            "orientation_verified": false
+          },
+          "target_recognized": false
+        },
+        {
+          "detection": {
+            "bbox": [
+              351,
+              318,
+              997,
+              990
+            ],
+            "raw_class": "chair_white",
+            "object_type": "chair_white",
+            "confidence": 0.9567971229553223,
+            "label_bbox": null
+          },
+          "ocr": {
+            "text": null,
+            "number": null,
+            "confidence": null,
+            "label_bbox": null,
+            "reject_reason": "a4_number_paper_not_found",
+            "paper_bbox": null,
+            "orientation_verified": false
+          },
+          "target_recognized": false
+        },
+        {
+          "detection": {
+            "bbox": [
+              25,
+              251,
+              614,
+              848
+            ],
+            "raw_class": "chair_white",
+            "object_type": "chair_white",
+            "confidence": 0.9524469375610352,
+            "label_bbox": null
+          },
+          "ocr": {
+            "text": null,
+            "number": null,
+            "confidence": null,
+            "label_bbox": null,
+            "reject_reason": "a4_number_paper_not_found",
+            "paper_bbox": null,
+            "orientation_verified": false
+          },
+          "target_recognized": false
+        },
+        {
+          "detection": {
+            "bbox": [
+              973,
+              798,
+              2528,
+              2394
+            ],
+            "raw_class": "chair_gray",
+            "object_type": "chair_gray",
+            "confidence": 0.9316133260726929,
+            "label_bbox": null
+          },
+          "ocr": {
+            "text": null,
+            "number": null,
+            "confidence": null,
+            "label_bbox": null,
+            "reject_reason": "a4_number_paper_not_found",
+            "paper_bbox": null,
+            "orientation_verified": false
+          },
+          "target_recognized": false
+        },
+        {
+          "detection": {
+            "bbox": [
+              0,
+              218,
+              455,
+              770
+            ],
+            "raw_class": "chair_orange",
+            "object_type": "chair_orange",
+            "confidence": 0.867773175239563,
+            "label_bbox": null
+          },
+          "ocr": {
+            "text": null,
+            "number": null,
+            "confidence": null,
+            "label_bbox": null,
+            "reject_reason": "a4_number_paper_not_found",
+            "paper_bbox": null,
+            "orientation_verified": false
+          },
+          "target_recognized": false
+        },
+        {
+          "detection": {
+            "bbox": [
+              1,
+              224,
+              311,
+              757
+            ],
+            "raw_class": "chair_orange",
+            "object_type": "chair_orange",
+            "confidence": 0.5163170099258423,
+            "label_bbox": null
+          },
+          "ocr": {
+            "text": null,
+            "number": null,
+            "confidence": null,
+            "label_bbox": null,
+            "reject_reason": "a4_number_paper_not_found",
+            "paper_bbox": null,
+            "orientation_verified": false
+          },
+          "target_recognized": false
+        }
+      ]
+    },
+    {
+      "file": "chair_orange_1.JPG",
+      "passed": true,
+      "accepted": [],
+      "proposals": 2,
+      "observations": [
+        {
+          "detection": {
+            "bbox": [
+              378,
+              922,
+              2248,
+              2794
+            ],
+            "raw_class": "chair_orange",
+            "object_type": "chair_orange",
+            "confidence": 0.9307560920715332,
+            "label_bbox": null
+          },
+          "ocr": {
+            "text": null,
+            "number": null,
+            "confidence": null,
+            "label_bbox": null,
+            "reject_reason": "a4_number_paper_not_found",
+            "paper_bbox": null,
+            "orientation_verified": false
+          },
+          "target_recognized": false
+        },
+        {
+          "detection": {
+            "bbox": [
+              2485,
+              2707,
+              3024,
+              4032
+            ],
+            "raw_class": "chair_orange",
+            "object_type": "chair_orange",
+            "confidence": 0.8397802710533142,
+            "label_bbox": null
+          },
+          "ocr": {
+            "text": null,
+            "number": null,
+            "confidence": null,
+            "label_bbox": null,
+            "reject_reason": "a4_number_paper_not_found",
+            "paper_bbox": null,
+            "orientation_verified": false
+          },
+          "target_recognized": false
+        }
+      ]
+    },
+    {
+      "file": "chair_orange_2.JPG",
+      "passed": true,
+      "accepted": [],
+      "proposals": 2,
+      "observations": [
+        {
+          "detection": {
+            "bbox": [
+              1078,
+              790,
+              2478,
+              2264
+            ],
+            "raw_class": "chair_orange",
+            "object_type": "chair_orange",
+            "confidence": 0.9448343515396118,
+            "label_bbox": null
+          },
+          "ocr": {
+            "text": null,
+            "number": null,
+            "confidence": null,
+            "label_bbox": null,
+            "reject_reason": "a4_number_paper_not_found",
+            "paper_bbox": null,
+            "orientation_verified": false
+          },
+          "target_recognized": false
+        },
+        {
+          "detection": {
+            "bbox": [
+              467,
+              328,
+              1576,
+              1262
+            ],
+            "raw_class": "chair_orange",
+            "object_type": "chair_orange",
+            "confidence": 0.9307904839515686,
+            "label_bbox": null
+          },
+          "ocr": {
+            "text": null,
+            "number": null,
+            "confidence": null,
+            "label_bbox": null,
+            "reject_reason": "a4_number_paper_not_found",
+            "paper_bbox": null,
+            "orientation_verified": false
+          },
+          "target_recognized": false
+        }
+      ]
+    },
+    {
+      "file": "chair_white_1.JPG",
+      "passed": true,
+      "accepted": [],
+      "proposals": 4,
+      "observations": [
+        {
+          "detection": {
+            "bbox": [
+              13,
+              769,
+              2389,
+              3194
+            ],
+            "raw_class": "chair_white",
+            "object_type": "chair_white",
+            "confidence": 0.9091919660568237,
+            "label_bbox": null
+          },
+          "ocr": {
+            "text": null,
+            "number": null,
+            "confidence": null,
+            "label_bbox": null,
+            "reject_reason": "a4_number_paper_not_found",
+            "paper_bbox": null,
+            "orientation_verified": false
+          },
+          "target_recognized": false
+        },
+        {
+          "detection": {
+            "bbox": [
+              2326,
+              3609,
+              3024,
+              4030
+            ],
+            "raw_class": "chair_gray",
+            "object_type": "chair_gray",
+            "confidence": 0.8273612856864929,
+            "label_bbox": null
+          },
+          "ocr": {
+            "text": null,
+            "number": null,
+            "confidence": null,
+            "label_bbox": null,
+            "reject_reason": "a4_number_paper_not_found",
+            "paper_bbox": null,
+            "orientation_verified": false
+          },
+          "target_recognized": false
+        },
+        {
+          "detection": {
+            "bbox": [
+              2358,
+              3576,
+              2933,
+              4032
+            ],
+            "raw_class": "chair_gray",
+            "object_type": "chair_gray",
+            "confidence": 0.41163069009780884,
+            "label_bbox": null
+          },
+          "ocr": {
+            "text": null,
+            "number": null,
+            "confidence": null,
+            "label_bbox": null,
+            "reject_reason": "a4_number_paper_not_found",
+            "paper_bbox": null,
+            "orientation_verified": false
+          },
+          "target_recognized": false
+        },
+        {
+          "detection": {
+            "bbox": [
+              2058,
+              3620,
+              3024,
+              4032
+            ],
+            "raw_class": "chair_gray",
+            "object_type": "chair_gray",
+            "confidence": 0.38966208696365356,
+            "label_bbox": null
+          },
+          "ocr": {
+            "text": null,
+            "number": null,
+            "confidence": null,
+            "label_bbox": null,
+            "reject_reason": "a4_number_paper_not_found",
+            "paper_bbox": null,
+            "orientation_verified": false
+          },
+          "target_recognized": false
+        }
+      ]
+    },
+    {
+      "file": "chair_white_2.JPG",
+      "passed": true,
+      "accepted": [],
+      "proposals": 7,
+      "observations": [
+        {
+          "detection": {
+            "bbox": [
+              1613,
+              289,
+              2418,
+              985
+            ],
+            "raw_class": "chair_white",
+            "object_type": "chair_white",
+            "confidence": 0.9858940839767456,
+            "label_bbox": null
+          },
+          "ocr": {
+            "text": null,
+            "number": null,
+            "confidence": null,
+            "label_bbox": null,
+            "reject_reason": "a4_number_paper_not_found",
+            "paper_bbox": null,
+            "orientation_verified": false
+          },
+          "target_recognized": false
+        },
+        {
+          "detection": {
+            "bbox": [
+              1106,
+              214,
+              1870,
+              923
+            ],
+            "raw_class": "chair_white",
+            "object_type": "chair_white",
+            "confidence": 0.9658000469207764,
+            "label_bbox": null
+          },
+          "ocr": {
+            "text": null,
+            "number": null,
+            "confidence": null,
+            "label_bbox": null,
+            "reject_reason": "a4_number_paper_not_found",
+            "paper_bbox": null,
+            "orientation_verified": false
+          },
+          "target_recognized": false
+        },
+        {
+          "detection": {
+            "bbox": [
+              0,
+              36,
+              283,
+              574
+            ],
+            "raw_class": "chair_orange",
+            "object_type": "chair_orange",
+            "confidence": 0.9195725917816162,
+            "label_bbox": null
+          },
+          "ocr": {
+            "text": null,
+            "number": null,
+            "confidence": null,
+            "label_bbox": null,
+            "reject_reason": "a4_number_paper_not_found",
+            "paper_bbox": null,
+            "orientation_verified": false
+          },
+          "target_recognized": false
+        },
+        {
+          "detection": {
+            "bbox": [
+              3141,
+              492,
+              4029,
+              1589
+            ],
+            "raw_class": "chair_gray",
+            "object_type": "chair_gray",
+            "confidence": 0.9191214442253113,
+            "label_bbox": null
+          },
+          "ocr": {
+            "text": null,
+            "number": null,
+            "confidence": null,
+            "label_bbox": null,
+            "reject_reason": "a4_number_paper_not_found",
+            "paper_bbox": null,
+            "orientation_verified": false
+          },
+          "target_recognized": false
+        },
+        {
+          "detection": {
+            "bbox": [
+              840,
+              167,
+              1390,
+              795
+            ],
+            "raw_class": "chair_orange",
+            "object_type": "chair_orange",
+            "confidence": 0.9093347787857056,
+            "label_bbox": null
+          },
+          "ocr": {
+            "text": null,
+            "number": null,
+            "confidence": null,
+            "label_bbox": null,
+            "reject_reason": "a4_number_paper_not_found",
+            "paper_bbox": null,
+            "orientation_verified": false
+          },
+          "target_recognized": false
+        },
+        {
+          "detection": {
+            "bbox": [
+              1152,
+              794,
+              2647,
+              2384
+            ],
+            "raw_class": "chair_white",
+            "object_type": "chair_white",
+            "confidence": 0.8898541331291199,
+            "label_bbox": null
+          },
+          "ocr": {
+            "text": null,
+            "number": null,
+            "confidence": null,
+            "label_bbox": null,
+            "reject_reason": "a4_number_paper_not_found",
+            "paper_bbox": null,
+            "orientation_verified": false
+          },
+          "target_recognized": false
+        },
+        {
+          "detection": {
+            "bbox": [
+              69,
+              85,
+              523,
+              626
+            ],
+            "raw_class": "chair_orange",
+            "object_type": "chair_orange",
+            "confidence": 0.8317223191261292,
+            "label_bbox": null
+          },
+          "ocr": {
+            "text": null,
+            "number": null,
+            "confidence": null,
+            "label_bbox": null,
+            "reject_reason": "a4_number_paper_not_found",
+            "paper_bbox": null,
+            "orientation_verified": false
+          },
+          "target_recognized": false
+        }
+      ]
+    },
+    {
+      "file": "fire_extinguisher_1.JPG",
+      "passed": true,
+      "accepted": [],
+      "proposals": 1,
+      "observations": [
+        {
+          "detection": {
+            "bbox": [
+              801,
+              1052,
+              2115,
+              3774
+            ],
+            "raw_class": "fire_extinguisher",
+            "object_type": "fire_extinguisher",
+            "confidence": 0.8224160671234131,
+            "label_bbox": null
+          },
+          "ocr": {
+            "text": null,
+            "number": null,
+            "confidence": null,
+            "label_bbox": null,
+            "reject_reason": "a4_number_paper_not_found",
+            "paper_bbox": null,
+            "orientation_verified": false
+          },
+          "target_recognized": false
+        }
+      ]
+    },
+    {
+      "file": "fire_extinguisher_2.JPG",
+      "passed": true,
+      "accepted": [],
+      "proposals": 1,
+      "observations": [
+        {
+          "detection": {
+            "bbox": [
+              1036,
+              817,
+              2280,
+              3696
+            ],
+            "raw_class": "fire_extinguisher",
+            "object_type": "fire_extinguisher",
+            "confidence": 0.8542815446853638,
+            "label_bbox": null
+          },
+          "ocr": {
+            "text": null,
+            "number": null,
+            "confidence": null,
+            "label_bbox": null,
+            "reject_reason": "a4_number_paper_not_found",
+            "paper_bbox": null,
+            "orientation_verified": false
+          },
+          "target_recognized": false
+        }
+      ]
+    },
+    {
+      "file": "fire_extinguisher_3.JPG",
+      "passed": true,
+      "accepted": [],
+      "proposals": 1,
+      "observations": [
+        {
+          "detection": {
+            "bbox": [
+              696,
+              1112,
+              2064,
+              3551
+            ],
+            "raw_class": "fire_extinguisher",
+            "object_type": "fire_extinguisher",
+            "confidence": 0.8125165700912476,
+            "label_bbox": null
+          },
+          "ocr": {
+            "text": null,
+            "number": null,
+            "confidence": null,
+            "label_bbox": null,
+            "reject_reason": "a4_number_paper_not_found",
+            "paper_bbox": null,
+            "orientation_verified": false
+          },
+          "target_recognized": false
+        }
+      ]
+    },
+    {
+      "file": "chair_gray_number_21.jpg",
+      "passed": false,
+      "accepted": [
+        {
+          "detection": {
+            "bbox": [
+              308,
+              457,
+              1702,
+              1823
+            ],
+            "raw_class": "chair_white",
+            "object_type": "chair_white",
+            "confidence": 0.9289605021476746,
+            "label_bbox": [
+              507,
+              603,
+              1289,
+              1393
+            ]
+          },
+          "ocr": {
+            "text": "21",
+            "number": 21,
+            "confidence": 0.99956,
+            "label_bbox": [
+              795,
+              925,
+              1027,
+              1191
+            ],
+            "reject_reason": null,
+            "paper_bbox": [
+              308,
+              457,
+              1702,
+              1823
+            ],
+            "orientation_verified": false
+          },
+          "target_recognized": true
+        }
+      ],
+      "proposals": 1,
+      "observations": [
+        {
+          "detection": {
+            "bbox": [
+              308,
+              457,
+              1702,
+              1823
+            ],
+            "raw_class": "chair_white",
+            "object_type": "chair_white",
+            "confidence": 0.9289605021476746,
+            "label_bbox": [
+              507,
+              603,
+              1289,
+              1393
+            ]
+          },
+          "ocr": {
+            "text": "21",
+            "number": 21,
+            "confidence": 0.99956,
+            "label_bbox": [
+              795,
+              925,
+              1027,
+              1191
+            ],
+            "reject_reason": null,
+            "paper_bbox": [
+              308,
+              457,
+              1702,
+              1823
+            ],
+            "orientation_verified": false
+          },
+          "target_recognized": true
+        }
+      ]
+    }
+  ]
+}

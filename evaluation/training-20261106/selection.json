@@ -1,0 +1,217 @@
+{
+  "selection_metric": "macro mAP50-95 across five object classes on common v2 dev; excludes number_label",
+  "candidates": [
+    {
+      "weights": "D:\\FPTDocuments\\Semester_8\\AI-Drone\\FinalDrone\\experiments\\detector-frozen-v1\\weights\\best.pt",
+      "split": "val",
+      "imgsz": 416,
+      "per_class_map50_95": {
+        "chair_orange": 0.3879444444444444,
+        "chair_white": 0.01634300582962107,
+        "chair_gray": 0.05215952380952381,
+        "backpack": 0.17864382368986198,
+        "fire_extinguisher": 0.597,
+        "number_label": 0.5859909309243871
+      },
+      "target_macro_map50_95": 0.24641815955469024,
+      "metrics": {
+        "metrics/precision(B)": 0.8418499747048761,
+        "metrics/recall(B)": 0.4755624970450742,
+        "metrics/mAP50(B)": 0.5493227240217263,
+        "metrics/mAP50-95(B)": 0.30301362144963967,
+        "fitness": 0.30301362144963967
+      }
+    },
+    {
+      "weights": "D:\\FPTDocuments\\Semester_8\\AI-Drone\\FinalDrone\\experiments\\detector-frozen-v1\\weights\\best.pt",
+      "split": "val",
+      "imgsz": 640,
+      "per_class_map50_95": {
+        "chair_orange": 0.25399999999999995,
+        "chair_white": 0.15459536988497713,
+        "chair_gray": 0.06033487101134159,
+        "backpack": 0.17290881948794162,
+        "fire_extinguisher": 0.5801666666666667,
+        "number_label": 0.5827027267232686
+      },
+      "target_macro_map50_95": 0.2444011454101854,
+      "metrics": {
+        "metrics/precision(B)": 0.5610513256621016,
+        "metrics/recall(B)": 0.5408317913848205,
+        "metrics/mAP50(B)": 0.5974270150524286,
+        "metrics/mAP50-95(B)": 0.30078474229569924,
+        "fitness": 0.30078474229569924
+      }
+    },
+    {
+      "weights": "D:\\FPTDocuments\\Semester_8\\AI-Drone\\FinalDrone\\experiments\\detector-full-v2\\weights\\best.pt",
+      "split": "val",
+      "imgsz": 416,
+      "per_class_map50_95": {
+        "chair_orange": 0.6980625,
+        "chair_white": 0.41580158730158734,
+        "chair_gray": 0.36777948989031317,
+        "backpack": 0.20597959140984728,
+        "fire_extinguisher": 0.779,
+        "number_label": 0.6377782269773716
+      },
+      "target_macro_map50_95": 0.49332463372034957,
+      "metrics": {
+        "metrics/precision(B)": 0.7722268937327049,
+        "metrics/recall(B)": 0.787289493286281,
+        "metrics/mAP50(B)": 0.8227055897188258,
+        "metrics/mAP50-95(B)": 0.5174002325965199,
+        "fitness": 0.5174002325965199
+      }
+    },
+    {
+      "weights": "D:\\FPTDocuments\\Semester_8\\AI-Drone\\FinalDrone\\experiments\\detector-full-v2\\weights\\best.pt",
+      "split": "val",
+      "imgsz": 640,
+      "per_class_map50_95": {
+        "chair_orange": 0.6608571428571428,
+        "chair_white": 0.3966150525525525,
+        "chair_gray": 0.4422824074074073,
+        "backpack": 0.1784491193789371,
+        "fire_extinguisher": 0.39251388888888894,
+        "number_label": 0.5823761994702912
+      },
+      "target_macro_map50_95": 0.4141435222169857,
+      "metrics": {
+        "metrics/precision(B)": 0.7089619421603909,
+        "metrics/recall(B)": 0.7886009546917969,
+        "metrics/mAP50(B)": 0.8641873854894341,
+        "metrics/mAP50-95(B)": 0.4421823017592033,
+        "fitness": 0.4421823017592033
+      }
+    },
+    {
+      "weights": "D:\\FPTDocuments\\Semester_8\\AI-Drone\\FinalDrone\\experiments\\yolo11n-gpu-v2\\weights\\best.pt",
+      "split": "val",
+      "imgsz": 416,
+      "per_class_map50_95": {
+        "chair_orange": 0.48085714285714276,
+        "chair_white": 0.024037909458962087,
+        "chair_gray": 0.004822843416745855,
+        "backpack": 0.07072676255509108,
+        "fire_extinguisher": 0.5971725352112676,
+        "number_label": 0.45091528459812197
+      },
+      "target_macro_map50_95": 0.23552343869984188,
+      "metrics": {
+        "metrics/precision(B)": 0.41346735599828216,
+        "metrics/recall(B)": 0.5435606060606061,
+        "metrics/mAP50(B)": 0.47928733981629695,
+        "metrics/mAP50-95(B)": 0.2714220796828885,
+        "fitness": 0.2714220796828885
+      }
+    },
+    {
+      "weights": "D:\\FPTDocuments\\Semester_8\\AI-Drone\\FinalDrone\\experiments\\yolo11n-gpu-v2\\weights\\best.pt",
+      "split": "val",
+      "imgsz": 640,
+      "per_class_map50_95": {
+        "chair_orange": 0.7816888888888889,
+        "chair_white": 0.27519800569800573,
+        "chair_gray": 0.10642150266531085,
+        "backpack": 0.09698357196513303,
+        "fire_extinguisher": 0.796,
+        "number_label": 0.5269988048499588
+      },
+      "target_macro_map50_95": 0.41125839384346774,
+      "metrics": {
+        "metrics/precision(B)": 0.534964222909064,
+        "metrics/recall(B)": 0.7055722279463646,
+        "metrics/mAP50(B)": 0.6763270438928011,
+        "metrics/mAP50-95(B)": 0.4305484623445495,
+        "fitness": 0.4305484623445495
+      }
+    },
+    {
+      "weights": "D:\\FPTDocuments\\Semester_8\\AI-Drone\\FinalDrone\\experiments\\detector-refine-gpu-v2\\weights\\best.pt",
+      "split": "val",
+      "imgsz": 416,
+      "per_class_map50_95": {
+        "chair_orange": 0.8084999999999999,
+        "chair_white": 0.2990707722007722,
+        "chair_gray": 0.2836309523809524,
+        "backpack": 0.2502682425571299,
+        "fire_extinguisher": 0.8205,
+        "number_label": 0.6955832913786251
+      },
+      "target_macro_map50_95": 0.49239399342777085,
+      "metrics": {
+        "metrics/precision(B)": 0.8093016310280422,
+        "metrics/recall(B)": 0.6755050505050505,
+        "metrics/mAP50(B)": 0.7511902841533987,
+        "metrics/mAP50-95(B)": 0.5262588764195799,
+        "fitness": 0.5262588764195799
+      }
+    },
+    {
+      "weights": "D:\\FPTDocuments\\Semester_8\\AI-Drone\\FinalDrone\\experiments\\detector-refine-gpu-v2\\weights\\best.pt",
+      "split": "val",
+      "imgsz": 640,
+      "per_class_map50_95": {
+        "chair_orange": 0.784,
+        "chair_white": 0.5379018932874353,
+        "chair_gray": 0.49316666666666664,
+        "backpack": 0.1905802925625734,
+        "fire_extinguisher": 0.634,
+        "number_label": 0.7137875900852715
+      },
+      "target_macro_map50_95": 0.527929770503335,
+      "metrics": {
+        "metrics/precision(B)": 0.8076045944289886,
+        "metrics/recall(B)": 0.8157905482585287,
+        "metrics/mAP50(B)": 0.8584394755302726,
+        "metrics/mAP50-95(B)": 0.5589060737669911,
+        "fitness": 0.5589060737669911
+      }
+    }
+  ],
+  "selected": {
+    "weights": "D:\\FPTDocuments\\Semester_8\\AI-Drone\\FinalDrone\\experiments\\detector-refine-gpu-v2\\weights\\best.pt",
+    "split": "val",
+    "imgsz": 640,
+    "per_class_map50_95": {
+      "chair_orange": 0.784,
+      "chair_white": 0.5379018932874353,
+      "chair_gray": 0.49316666666666664,
+      "backpack": 0.1905802925625734,
+      "fire_extinguisher": 0.634,
+      "number_label": 0.7137875900852715
+    },
+    "target_macro_map50_95": 0.527929770503335,
+    "metrics": {
+      "metrics/precision(B)": 0.8076045944289886,
+      "metrics/recall(B)": 0.8157905482585287,
+      "metrics/mAP50(B)": 0.8584394755302726,
+      "metrics/mAP50-95(B)": 0.5589060737669911,
+      "fitness": 0.5589060737669911
+    }
+  },
+  "holdout": {
+    "weights": "D:\\FPTDocuments\\Semester_8\\AI-Drone\\FinalDrone\\models\\best_detector.pt",
+    "split": "test",
+    "imgsz": 640,
+    "per_class_map50_95": {
+      "chair_orange": null,
+      "chair_white": null,
+      "chair_gray": 0.174125,
+      "backpack": 0.07324423180815148,
+      "fire_extinguisher": null,
+      "number_label": 0.3383
+    },
+    "target_macro_map50_95": 0.12368461590407574,
+    "metrics": {
+      "metrics/precision(B)": 0.97438748333711,
+      "metrics/recall(B)": 0.38272974883649086,
+      "metrics/mAP50(B)": 0.5276507625913347,
+      "metrics/mAP50-95(B)": 0.19522307726938382,
+      "fitness": 0.19522307726938382
+    }
+  },
+  "sha256": "f0dc90b7b613b8857516b749ef271dd12732a81db7c6dce2ac812b7fbd29461c",
+  "note": "Small source-separated dataset with synthetic A4. Detector holdout does not establish competition accuracy. Real number fixtures were used for OCR development."
+}

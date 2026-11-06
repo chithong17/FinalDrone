@@ -39,7 +39,7 @@ Ngoài dải hoặc thiếu dữ liệu trả None; không làm tròn và không
 
 Loại vùng ±10° quanh mỗi ranh giới. Chỉ xác nhận khi drone gần vị trí đo, vật gần tâm ảnh, camera đúng hướng hiệu chuẩn và yaw ổn định.
 
-Dùng lại `starter-kit-indoor/telemetry_location.py` và cấu hình đi kèm. Chưa kiểm chứng chọn `attitude_head` hay hướng camera làm heading; không tự cộng yaw drone và gimbal.
+Dùng lại `starter-kit-indoor/telemetry_location.py` và cấu hình đi kèm. Người dùng đã xác nhận dùng yaw thân drone (`attitude_head`), camera luôn thẳng theo thân; không cộng yaw gimbal. Ghế đã xác nhận dùng cam/trắng/xám, bỏ blue.
 
 ## 3. Bước 1 — Dựng môi trường và chuẩn bị asset
 
@@ -214,16 +214,18 @@ Quy ước: bbox XYXY trên ảnh gốc; mét, độ, epoch mili giây, video gi
 
 ## 13. Tiến độ và việc làm ngay
 
-Đã có video ghép, telemetry, viewer và module quy tắc tầng/hướng. Chưa kiểm chứng end-to-end detector/OCR/location mới/server.
+Đã triển khai CLI và pipeline mới trong `src/`; cách chạy ở [README.md](README.md). Các mục sau phân biệt đã viết công cụ với đã nghiệm thu chất lượng:
 
-- [ ] Bước 1: môi trường và asset.
-- [ ] Bước 2: tập đánh giá và nhãn.
-- [ ] Bước 3: detector một ảnh.
-- [ ] Bước 4: OCR một ảnh.
-- [ ] Bước 5: telemetry và location.
-- [ ] Bước 6: video offline và tracking.
-- [ ] Bước 7: live và API.
-- [ ] Bước 8: đánh giá, tối ưu.
-- [ ] Bước 9: thử 300 giây, đóng gói.
+- [x] Bước 1: môi trường `.venv`, dependency và asset local đã cài/load được.
+- [ ] Bước 2: đã có seed bbox local + COCO, bộ v3 633 ảnh; cần holdout chuyến bay thật cho đủ lớp và ảnh A4 thật đa dạng hơn.
+- [ ] Bước 3: đã train 5 đợt, chọn `models/best_detector.pt`; chưa nghiệm thu field accuracy, lớp balo vẫn yếu trên holdout mới.
+- [ ] Bước 4: OCR thật 21/62/99 đạt 16/16 case xoay/âm tính; còn cần đo số nhỏ/mờ và nhãn thực địa mới.
+- [ ] Bước 5: timestamp/location và kiểm thử đã có; chờ kiểm chứng đồng bộ/tư thế thực địa.
+- [ ] Bước 6: pipeline video/tracking đã chạy; chờ nghiệm thu chất lượng bằng nhãn.
+- [ ] Bước 7: adapter live/outbox đã có và test retry; chờ schema/token/session BTC để xác minh.
+- [ ] Bước 8: đã so sánh checkpoint/resolution trên dev và kiểm tra holdout nhỏ; kết quả ở `evaluation/TRAINING_RESULTS.md`, chưa có so sánh độc lập trên chuyến bay mới.
+- [ ] Bước 9: đã smoke realtime 300 giây trên máy hiện tại; chưa nghiệm thu chất lượng, máy BTC/đóng gói. Kết quả: [IMPLEMENTATION_RESULTS.md](evaluation/IMPLEMENTATION_RESULTS.md).
 
-Bắt đầu tại bước 1. Mỗi mốc cập nhật context, lệnh chạy và commit; chỉ đánh dấu hoàn thành sau nghiệm thu, không chỉ vì đã viết code. Tài liệu này không thực hiện commit/push.
+Điểm tiếp tục là bước 2: gán nhãn và tạo split độc lập. Mỗi mốc cập nhật context, lệnh chạy và commit; chỉ đánh dấu hoàn thành sau nghiệm thu, không chỉ vì đã viết code. Chưa commit/push các thay đổi triển khai này.
+
+Model và cổng nhận mục tiêu hiện yêu cầu số trên A4; trường hợp có 6/9 phải xác định được chiều qua gạch dưới. Ảnh ghế số 21 đã dùng train v3, không dùng để tuyên bố accuracy holdout.

@@ -21,9 +21,14 @@ không thu nhầm vật ở tầng khác vào cùng lượt quét.
 Hướng dùng các ranh giới -47°, 7,1°, 133°, -173° theo sơ đồ đã đo.
 Vùng trong phạm vi ±10° quanh ranh giới: chưa xác định hướng.
 Chỉ chốt hướng khi vật gần tâm ảnh, camera đúng hướng đã hiệu chuẩn và yaw ổn định.
-Không mặc định cộng `attitude_head` và `gimbal_yaw`.
+Người dùng xác nhận dùng yaw thân (`attitude_head`), camera luôn thẳng theo thân.
+Không cộng thêm `gimbal_yaw`.
 
 Các hàm dùng chung nằm trong `telemetry_location.py`, cấu hình trong
 `telemetry-location.json`. Baseline gốc vẫn dùng ROI; module này chưa thay thế
 định vị ROI trong vòng nhận diện/gửi API. Khi tích hợp cần đồng bộ telemetry
 với frame và kiểm tra tư thế quét trước khi gọi hai hàm phân loại.
+
+Pipeline mới trong `src/telemetry.py` đã gọi hai hàm này, có kiểm tra tuổi mẫu,
+ổn định và vùng tâm ảnh. Config vận hành ở `configs/offline.json`; baseline ROI
+gốc vẫn giữ nguyên để tham chiếu. Ghế đã được xác nhận là cam/trắng/xám, bỏ blue.

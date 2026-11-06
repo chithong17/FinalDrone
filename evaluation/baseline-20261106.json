@@ -1,0 +1,21 @@
+{
+  "frames": 4307,
+  "observations": 6,
+  "candidates": 0,
+  "sampled_peak_rss_mb": 526.80859375,
+  "rejection_counts": {
+    "scan_pose_unverified": 6,
+    "target_off_center": 6,
+    "no_confident_two_digit_label": 6,
+    "number_not_confirmed": 6,
+    "yaw_unstable": 2,
+    "object_color_ambiguous": 4,
+    "heading_missing_or_boundary": 1
+  },
+  "processing_p50_ms": 44.246099998417776,
+  "processing_p95_ms": 52.25770000106422,
+  "max_frame_age_ms": 6188.000000000102,
+  "wall_time_s": 300.1409999999996,
+  "throughput_fps": 14.349922203231166,
+  "dropped_frames": 4524
+}

@@ -1,0 +1,9 @@
+{
+  "weights": "models/yolov8n.pt",
+  "ap50": 0.2412268172700819,
+  "map50_95": 0.1199353211451037,
+  "ground_truth": 44,
+  "images": 32,
+  "imgsz": 640,
+  "note": "Internal 101-point backpack AP, identical evaluator for all candidates; dev contains synthetic tags."
+}

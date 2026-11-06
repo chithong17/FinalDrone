@@ -1,0 +1,9 @@
+{
+  "weights": "experiments/detector-full-v2/weights/best.pt",
+  "ap50": 0.3581879336065707,
+  "map50_95": 0.15543821217080916,
+  "ground_truth": 44,
+  "images": 32,
+  "imgsz": 640,
+  "note": "Internal 101-point backpack AP, identical evaluator for all candidates; dev contains synthetic tags."
+}

@@ -1,8 +1,16 @@
 # Context dự án FinalDrone
 
+Để tiếp tục công việc đang dang dở, đọc [DEVELOPMENT_HANDOFF.md](DEVELOPMENT_HANDOFF.md): trạng thái bàn giao KTN, kiểm thử mới nhất, giới hạn và thứ tự công việc tiếp theo.
+
+**Cập nhật bàn giao KTN:** `solution.py` đã tương thích launcher BTC (`--server`, `--session`, `--source`, `--weights`, `--calibration`). Config live có sẵn; telemetry được tìm theo cấu trúc normalized thay vì JSON path chưa điền. 26 test qua, gồm HTTP cục bộ status → pipeline → POST → ACK bằng client gốc. Đã giải nén ZIP mới và chạy model thật thành công. Xem [KTN_README.md](KTN_README.md) và [LIVE_INTEGRATION_RESULTS.md](evaluation/LIVE_INTEGRATION_RESULTS.md). Chưa có xác nhận từ server BTC thật. Đóng gói lại bằng `python tools/package_submission.py`; đầu ra `output/KTN_submission.zip`.
+
 Cập nhật: 06/11/2026 (Asia/Saigon). Tài liệu bàn giao hiện trạng và các quyết định đã chốt; đọc trước khi tiếp tục phát triển.
 
 Lộ trình triển khai tuần tự cho một người từ môi trường đến bản thi hoàn chỉnh: [IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md). Tài liệu có đầu ra, điều kiện nghiệm thu và cách so sánh phương án ở từng bước; các cấu trúc/module đề xuất chưa đồng nghĩa đã được triển khai.
+
+**Cập nhật sau train:** đã chạy 5 đợt train và chọn model v3 local `models/best_detector.pt` (khoảng 6,5 MB), config `configs/trained.json`. Xem [TRAINING_RESULTS.md](evaluation/TRAINING_RESULTS.md), [model-manifest.json](configs/model-manifest.json) và [TRAINING_DATA.md](data/TRAINING_DATA.md). Ảnh 21 đã được dùng train v3; kiểm tra đúng ghế xám/số 21 chỉ là training fixture, không phải accuracy độc lập. Model chưa được nghiệm thu thi thật.
+
+Người dùng xác nhận vật thi có nhãn A4, chỉ chấp nhận khi đọc được số; 6/9 có gạch dưới để xác định chiều. Pipeline đã lọc vật không số và yêu cầu bằng chứng chiều đọc cho số có 6/9.
 
 ## 1. Mục tiêu
 
@@ -73,7 +81,7 @@ Khoảng phân loại cơ sở, trước khi loại vùng đệm:
 - Đây là góc hiệu chuẩn cho tòa nhà, không chia đều bốn hướng theo ±45°.
 - Chỉ xác nhận khi vật gần tâm ảnh, camera theo hướng đã hiệu chuẩn, drone gần vị trí đo và yaw ổn định.
 - `direction` là khu vực đặt vật, không đơn thuần là hướng mũi drone.
-- Phải kiểm chứng trường yaw sử dụng lúc đo là `attitude_head` hay hướng camera. Chưa xác nhận hệ quy chiếu của `gimbal_yaw`; **không tự cộng `attitude_head + gimbal_yaw`**.
+- Người dùng đã xác nhận đo **yaw thân drone**, camera luôn thẳng theo thân. Pipeline dùng `attitude_head` → `aircraft_yaw`, không cộng thêm `gimbal_yaw`.
 - Module hiện nhận một `heading_deg` đã phù hợp hiệu chuẩn; chưa tự kiểm tra camera, độ ổn định, vị trí hay tuổi telemetry.
 
 ## 4. Quyết định đã chốt: xác định tầng bằng độ cao
@@ -107,6 +115,13 @@ Tầng 1 không đặt cận dưới. Đúng 7 m và các khoảng trống giữ
 | `starter-kit-indoor/telemetry-location.json` | Đã bổ sung: cấu hình hướng và tầng đã chốt |
 | `starter-kit-indoor/telemetry_location.py` | Đã bổ sung: `floor_from_altitude()` và `direction_from_heading()` |
 | `starter-kit-indoor/SCAN_RULES.md` | Quy tắc vận hành và giới hạn của phương án quét |
+| `src/cli.py` | Entry point mới: prepare-assets, extract, annotate, predict-dataset, evaluate, export-yolo, train, run |
+| `src/vision.py`, `src/tracking.py` | YOLO local, HSV, RapidOCR local, tracking và OCR consensus |
+| `src/telemetry.py`, `src/pipeline.py` | Đồng bộ timestamp/PTS, location có kiểm tra tuổi mẫu/ổn định/tâm ảnh, chọn bằng chứng và log |
+| `src/delivery.py` | Polling status và queue gửi riêng, outbox/ACK/retry; chưa xác minh schema/server BTC thật |
+| `configs/offline.json` | Config chạy mới; yaw thân đã xác nhận, white đã ánh xạ; tư thế quét còn cần xác nhận vận hành |
+| `data/manifest.json` | 52 ảnh dev/pending; chưa có nhãn reviewed, chưa có holdout độc lập |
+| `README.md`, `requirements-lock.txt` | Cách chạy triển khai mới và phiên bản môi trường Windows đã cài |
 
 Kiểm tra đã thực hiện:
 
@@ -115,8 +130,15 @@ Kiểm tra đã thực hiện:
 - Người dùng đã ghép thành công `flight_261106.mp4` khoảng 475 MB, kèm 224 mẫu telemetry.
 - Đã sinh HTML viewer với 224 OSD; chưa ghi nhận xác nhận của người dùng về phát video và độ khớp thời gian thực tế.
 - **Chưa chạy end-to-end detector + OCR + định vị mới + server BTC.**
+- Đã tạo `.venv` Python 3.12, cài PyTorch CPU, Ultralytics, OpenCV, RapidOCR/ONNX Runtime và tải model local khoảng 22 MB.
+- Baseline COCO trước fine-tune đã chạy trên ảnh ghế cam và 12 frame video được chọn: không có detection. Sau đó đã train custom bằng seed bbox local và dữ liệu COCO.
+- RapidOCR đọc đúng ảnh synthetic `62` có gạch chân; không coi là accuracy video thật.
+- 23 kiểm thử logic đã qua; kiểm tra OCR ảnh thật 16/16 tình huống; kiểm tra model/cổng số loại đúng 10/10 ảnh không số, nhận đúng ghế xám 21 trên ảnh đã học. Không có request thử nghiệm tới BTC.
+- Smoke realtime 300 giây đã xử lý 4.307 frame, 14.35 FPS, P95 52.26 ms, RSS lấy mẫu 526.81 MB, 0 candidate. Đây là bản trước sửa chiều OCR; không phải field accuracy hoặc benchmark BTC. Chi tiết: [kết quả triển khai](evaluation/IMPLEMENTATION_RESULTS.md).
 
 ## 6. Cách chạy hiện tại trên Windows PowerShell
+
+Pipeline mới dùng `.\.venv\Scripts\python.exe -m src.cli`; lệnh đầy đủ trong [README.md](README.md). Các lệnh runtime dưới đây giữ lại cho công cụ ghép/xem ban đầu.
 
 Thư mục làm việc cục bộ:
 
@@ -164,24 +186,23 @@ Máy khác nên dùng Python 3.12 trong môi trường riêng theo hướng dẫ
 
 ## 8. Các điểm chưa giải quyết
 
-1. **Màu ghế:** đề PDF/README ghi `chair_blue`, nhưng code baseline/cấu hình mẫu/hướng dẫn mới và ảnh map có `chair_white`. Cần BTC xác nhận schema thực tế; chưa tự đổi nhãn gửi server.
+1. **Màu ghế đã được người dùng xác nhận:** bỏ blue, dùng `chair_white`, `chair_gray`, `chair_orange`. Config pipeline mới đã ánh xạ white; không sửa bản tài liệu BTC gốc.
 2. **Bố trí tầng:** đề PDF ghi 10 vật tầng 1–2, hướng dẫn mới mô tả 1–5. Người dùng đã chốt hỗ trợ đủ 5 tầng theo bảng độ cao; cần phân biệt quy tắc hỗ trợ với bố trí thi thật.
-3. Chưa có `models/`, Tesseract portable/tessdata, `venue.json` thật hoặc `.venv-baseline` tại thời điểm khảo sát.
-4. COCO pretrained không có class bình cứu hỏa; sửa class-map không tạo thêm năng lực nhận diện.
-5. Chưa có tracking, chọn frame tốt, OCR nhiều lần để xác nhận số hay tập đánh giá gán nhãn.
+3. Pipeline mới đã có `.venv` và model detector/OCR local. Baseline Tesseract cũ vẫn thiếu asset và venue thật; không dùng để đại diện hiện trạng pipeline mới.
+4. COCO pretrained không có class bình cứu hỏa. Model custom mới đã train lớp này; dữ liệu thực địa vẫn ít, không coi class-map là bằng chứng accuracy.
+5. Đã có tracking, chọn frame và OCR consensus; vẫn chưa có tập đánh giá gán nhãn để chứng minh chất lượng.
 6. Chống trùng baseline dùng bộ loại/số/tầng/hướng; có thể bỏ qua hai vật khác nhau trùng thông tin hoặc bỏ quan sát tốt hơn.
-7. Gửi HTTP/retry trong vòng xử lý có thể chặn nhận diện; cần cân nhắc hàng đợi gửi riêng.
+7. Pipeline mới đã tách queue gửi/polling khỏi nhận diện; adapter live cần xác minh response status và thử server thật.
 8. Hàm `run_offline_preview()` tồn tại trong baseline nhưng CLI chưa gọi; lệnh offline vẫn cần detector/OCR.
 9. Fixture ghế tổng hợp không bảo đảm YOLO nhận được; không coi đó là kiểm chứng chất lượng thực địa.
 
 ## 9. Việc tiếp theo
 
-1. Chuẩn bị môi trường Python riêng và model/OCR local; xác nhận nhãn ghế với BTC.
-2. Trích ảnh video thật, gán bbox vật thể và nhãn số riêng, tạo tập đánh giá giữ lại để kiểm thử.
-3. Dựng luồng offline: ảnh → nhận vật → crop nhãn → đọc số → hiển thị kết quả.
-4. Đồng bộ frame/telemetry; tích hợp hai hàm định vị mới và điều kiện chỉ xác nhận khi tư thế quét hợp lệ.
-5. Thêm tracking, xác nhận số qua nhiều quan sát, chọn ảnh bằng chứng tốt và gửi outbox/API.
-6. Chạy thử đầy đủ 300 giây, đo chất lượng và độ trễ trước khi tối ưu backend.
+1. Bổ sung ảnh thật A4 trên balo/ghế/bình ở góc drone và tạo holdout theo chuyến bay độc lập; hàng đợi 52 ảnh cũ vẫn có thể gán nhãn thêm.
+2. Model v3 đã train với bộ 633 ảnh sau augmentation (523 train / 90 dev / 20 holdout balo mới); mAP dev không chứng minh chất lượng thi, lớp balo còn yếu.
+3. OCR đã đọc được ảnh thật 21/62/99 ở bốn chiều; cần đo trên nhãn nhỏ/mờ/từ xa thay vì chỉ fixture đã biết.
+4. Kiểm chứng đồng bộ frame/OSD, tư thế quét và các ngưỡng ổn định trên dữ liệu thật.
+5. Lấy response status thật để hoàn thiện live; chạy thử trên laptop BTC và đóng gói sau khi đạt chất lượng.
 
 ## 10. Lưu ý khi đưa lên Git và đóng gói bài thi
 
@@ -189,4 +210,4 @@ Máy khác nên dùng Python 3.12 trong môi trường riêng theo hướng dẫ
 - Telemetry gốc có thể chứa thông tin định danh thiết bị và trường bí mật trong một số message; cần rà soát trước khi công khai. Tài liệu context này không chép các giá trị đó.
 - Không commit token, môi trường ảo hay `__pycache__`.
 - Khi nộp BTC: loại `sample_data/` khỏi gói; model tối đa 150 MB; dùng đường dẫn tương đối và tuân thủ hướng dẫn đóng gói BTC.
-- Tạo context không đồng nghĩa đã khởi tạo Git, commit hoặc push. Các thao tác Git chưa được thực hiện trong lượt tạo tài liệu này.
+- Repo đang ở `main`, remote `chithong17/FinalDrone`, đã push commit khởi tạo `b8ebc7e`. Các thay đổi triển khai/train mới chưa commit/push; model và dữ liệu lớn đang được gitignore.

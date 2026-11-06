@@ -1,0 +1,8 @@
+{
+  "Det.ocr_version": "PP-OCRv4",
+  "Det.model_type": "mobile",
+  "Rec.ocr_version": "PP-OCRv4",
+  "Rec.model_type": "mobile",
+  "EngineConfig.onnxruntime.intra_op_num_threads": 2,
+  "EngineConfig.onnxruntime.inter_op_num_threads": 1
+}

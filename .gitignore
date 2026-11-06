@@ -33,3 +33,9 @@ venv/
 .env.*
 !.env.example
 .vscode/
+.work/
+/models/
+/data/images/
+/data/contact-sheet.jpg
+/experiments/
+/artifacts/

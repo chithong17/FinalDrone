@@ -1,0 +1,4 @@
+# Install separately from requirements.txt, using the CUDA wheel index.
+--index-url https://download.pytorch.org/whl/cu128
+torch==2.11.0+cu128
+torchvision==0.26.0+cu128

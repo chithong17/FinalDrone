@@ -1,0 +1,361 @@
+{
+  "note": "Development regression fixtures; not independent field accuracy.",
+  "cases": [
+    {
+      "file": "number_62.jpg",
+      "rotation": 0,
+      "expected": 62,
+      "passed": true,
+      "result": {
+        "text": "62",
+        "number": 62,
+        "confidence": 0.9992,
+        "label_bbox": [
+          309,
+          693,
+          1170,
+          1277
+        ],
+        "reject_reason": null,
+        "paper_bbox": [
+          0,
+          0,
+          1440,
+          2560
+        ],
+        "orientation_verified": true
+      }
+    },
+    {
+      "file": "number_62.jpg",
+      "rotation": 90,
+      "expected": 62,
+      "passed": true,
+      "result": {
+        "text": "62",
+        "number": 62,
+        "confidence": 0.999,
+        "label_bbox": [
+          1287,
+          309,
+          1867,
+          1170
+        ],
+        "reject_reason": null,
+        "paper_bbox": [
+          0,
+          0,
+          2560,
+          1440
+        ],
+        "orientation_verified": true
+      }
+    },
+    {
+      "file": "number_62.jpg",
+      "rotation": 180,
+      "expected": 62,
+      "passed": true,
+      "result": {
+        "text": "62",
+        "number": 62,
+        "confidence": 0.9989,
+        "label_bbox": [
+          270,
+          1287,
+          1135,
+          1871
+        ],
+        "reject_reason": null,
+        "paper_bbox": [
+          0,
+          0,
+          1440,
+          2560
+        ],
+        "orientation_verified": true
+      }
+    },
+    {
+      "file": "number_62.jpg",
+      "rotation": 270,
+      "expected": 62,
+      "passed": true,
+      "result": {
+        "text": "62",
+        "number": 62,
+        "confidence": 0.99896,
+        "label_bbox": [
+          693,
+          270,
+          1277,
+          1135
+        ],
+        "reject_reason": null,
+        "paper_bbox": [
+          0,
+          0,
+          2560,
+          1440
+        ],
+        "orientation_verified": true
+      }
+    },
+    {
+      "file": "number_99.jpg",
+      "rotation": 0,
+      "expected": 99,
+      "passed": true,
+      "result": {
+        "text": "99",
+        "number": 99,
+        "confidence": 0.99892,
+        "label_bbox": [
+          288,
+          807,
+          1199,
+          1480
+        ],
+        "reject_reason": null,
+        "paper_bbox": [
+          0,
+          0,
+          1440,
+          2560
+        ],
+        "orientation_verified": true
+      }
+    },
+    {
+      "file": "number_99.jpg",
+      "rotation": 90,
+      "expected": 99,
+      "passed": true,
+      "result": {
+        "text": "99",
+        "number": 99,
+        "confidence": 0.99898,
+        "label_bbox": [
+          1080,
+          288,
+          1757,
+          1199
+        ],
+        "reject_reason": null,
+        "paper_bbox": [
+          0,
+          0,
+          2560,
+          1440
+        ],
+        "orientation_verified": true
+      }
+    },
+    {
+      "file": "number_99.jpg",
+      "rotation": 180,
+      "expected": 99,
+      "passed": true,
+      "result": {
+        "text": "99",
+        "number": 99,
+        "confidence": 0.99895,
+        "label_bbox": [
+          245,
+          1080,
+          1156,
+          1757
+        ],
+        "reject_reason": null,
+        "paper_bbox": [
+          0,
+          0,
+          1440,
+          2560
+        ],
+        "orientation_verified": true
+      }
+    },
+    {
+      "file": "number_99.jpg",
+      "rotation": 270,
+      "expected": 99,
+      "passed": true,
+      "result": {
+        "text": "99",
+        "number": 99,
+        "confidence": 0.99907,
+        "label_bbox": [
+          807,
+          241,
+          1480,
+          1156
+        ],
+        "reject_reason": null,
+        "paper_bbox": [
+          0,
+          0,
+          2560,
+          1440
+        ],
+        "orientation_verified": true
+      }
+    },
+    {
+      "file": "chair_gray_number_21.jpg",
+      "rotation": 0,
+      "expected": 21,
+      "passed": true,
+      "result": {
+        "text": "21",
+        "number": 21,
+        "confidence": 0.99912,
+        "label_bbox": [
+          782,
+          915,
+          1035,
+          1201
+        ],
+        "reject_reason": null,
+        "paper_bbox": [
+          570,
+          835,
+          1239,
+          1313
+        ],
+        "orientation_verified": false
+      }
+    },
+    {
+      "file": "chair_gray_number_21.jpg",
+      "rotation": 90,
+      "expected": 21,
+      "passed": true,
+      "result": {
+        "text": "21",
+        "number": 21,
+        "confidence": 0.9993,
+        "label_bbox": [
+          1359,
+          782,
+          1645,
+          1036
+        ],
+        "reject_reason": null,
+        "paper_bbox": [
+          1246,
+          569,
+          1725,
+          1239
+        ],
+        "orientation_verified": false
+      }
+    },
+    {
+      "file": "chair_gray_number_21.jpg",
+      "rotation": 180,
+      "expected": 21,
+      "passed": true,
+      "result": {
+        "text": "21",
+        "number": 21,
+        "confidence": 0.9991,
+        "label_bbox": [
+          885,
+          1361,
+          1136,
+          1645
+        ],
+        "reject_reason": null,
+        "paper_bbox": [
+          680,
+          1246,
+          1349,
+          1724
+        ],
+        "orientation_verified": false
+      }
+    },
+    {
+      "file": "chair_gray_number_21.jpg",
+      "rotation": 270,
+      "expected": 21,
+      "passed": true,
+      "result": {
+        "text": "21",
+        "number": 21,
+        "confidence": 0.99915,
+        "label_bbox": [
+          914,
+          885,
+          1200,
+          1137
+        ],
+        "reject_reason": null,
+        "paper_bbox": [
+          834,
+          680,
+          1313,
+          1350
+        ],
+        "orientation_verified": false
+      }
+    },
+    {
+      "file": "chair_gray_1.JPG",
+      "expected": null,
+      "passed": true,
+      "result": {
+        "text": null,
+        "number": null,
+        "confidence": null,
+        "label_bbox": null,
+        "reject_reason": "no_confident_two_digit_label",
+        "paper_bbox": null,
+        "orientation_verified": false
+      }
+    },
+    {
+      "file": "chair_white_1.JPG",
+      "expected": null,
+      "passed": true,
+      "result": {
+        "text": null,
+        "number": null,
+        "confidence": null,
+        "label_bbox": null,
+        "reject_reason": "no_confident_two_digit_label",
+        "paper_bbox": null,
+        "orientation_verified": false
+      }
+    },
+    {
+      "file": "fire_extinguisher_1.JPG",
+      "expected": null,
+      "passed": true,
+      "result": {
+        "text": null,
+        "number": null,
+        "confidence": null,
+        "label_bbox": null,
+        "reject_reason": "no_confident_two_digit_label",
+        "paper_bbox": null,
+        "orientation_verified": false
+      }
+    },
+    {
+      "file": "fire_extinguisher_3.JPG",
+      "expected": null,
+      "passed": true,
+      "result": {
+        "text": null,
+        "number": null,
+        "confidence": null,
+        "label_bbox": null,
+        "reject_reason": "no_confident_two_digit_label",
+        "paper_bbox": null,
+        "orientation_verified": false
+      }
+    }
+  ]
+}

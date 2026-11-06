@@ -1,0 +1,99 @@
+{
+  "weights": "models/best_detector.pt",
+  "class_map": {
+    "chair_orange": "chair_orange",
+    "chair_white": "chair_white",
+    "chair_gray": "chair_gray",
+    "backpack": "backpack",
+    "fire_extinguisher": "fire_extinguisher"
+  },
+  "imgsz": 640,
+  "confidence": 0.35,
+  "device": "cpu",
+  "threads": 2,
+  "ocr": {
+    "min_confidence": 0.9,
+    "rotations": [
+      0,
+      180
+    ],
+    "min_label_area_fraction": 0.005,
+    "max_label_candidates": 4
+  },
+  "color": {
+    "min_fraction": 0.45,
+    "min_margin": 0.15,
+    "ranges": {
+      "chair_orange": [
+        [
+          5,
+          100,
+          65
+        ],
+        [
+          25,
+          255,
+          255
+        ]
+      ],
+      "chair_white": [
+        [
+          0,
+          0,
+          180
+        ],
+        [
+          179,
+          40,
+          255
+        ]
+      ],
+      "chair_gray": [
+        [
+          0,
+          0,
+          45
+        ],
+        [
+          179,
+          55,
+          175
+        ]
+      ]
+    }
+  },
+  "location": {
+    "heading_field": "aircraft_yaw",
+    "heading_verified": true,
+    "scan_pose_verified": true,
+    "center_fraction": 0.2,
+    "max_telemetry_age_s": 3.0,
+    "stability_window_s": 4.5,
+    "min_stable_samples": 2,
+    "max_yaw_spread_deg": 5.0,
+    "max_alt_spread_m": 0.5,
+    "gimbal_pitch_range": null,
+    "telemetry_offset_s": 0.0
+  },
+  "tracking": {
+    "iou_threshold": 0.3,
+    "max_gap_s": 3.0,
+    "min_votes": 2,
+    "vote_fraction": 0.75,
+    "ocr_every_s": 0.5
+  },
+  "delivery": {
+    "object_type_map": {
+      "chair_orange": "chair_orange",
+      "chair_white": "chair_white",
+      "chair_gray": "chair_gray",
+      "backpack": "backpack",
+      "fire_extinguisher": "fire_extinguisher"
+    },
+    "queue_capacity": 10,
+    "poll_interval_s": 1.0,
+    "status_telemetry_path": "auto",
+    "status_time_left_path": "time_left_s",
+    "status_state_path": "state"
+  }
+}
